@@ -38,7 +38,7 @@ is slow because factory is asking real gradle for tasks. Instead of that you can
   
   gradle.clean()
   
-  gradle.add_task(['package:build', 'package2:build']).parallel().execute()
+  gradle.add_tasks('package:build', 'package2:build').parallel().execute()
 
 
 Which is quicker.
@@ -46,4 +46,5 @@ Which is quicker.
 Missing Features
 ----------------
 - Gradle task configuration
+- Rest options
 - Finds better way to check exection status.
