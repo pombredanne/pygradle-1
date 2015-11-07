@@ -47,4 +47,4 @@ Missing Features
 ----------------
 - Gradle task configuration
 - Rest options
-- Finds better way to check exection status.
+- Finds better way to check execution status.
