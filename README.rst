@@ -45,5 +45,5 @@ Which is quicker.
 
 Missing Features
 ----------------
--Gradle task configuration
--Finds better way to check exection status.
+- Gradle task configuration
+- Finds better way to check exection status.
