@@ -1,5 +1,6 @@
-from pygradle import system
 from types import MethodType
+
+from src.pygradle import system
 
 
 _BASIC_GRADLE_TASKS = ['assemble', 'build', 'buildDependents', 'buildNeeded',
