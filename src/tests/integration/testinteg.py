@@ -2,7 +2,7 @@ import os
 import unittest
 import sys
 
-from src.pygradle import gradlew
+from src import pygradle
 
 
 try:
@@ -25,5 +25,5 @@ class TestInteg(unittest.TestCase):
         os.chdir(self.save_path)
 
     def test_should_gradle_clean_ends_with_success_status(self):
-        gradle = gradlew.GradleFactory.create(gradle_cmd=GRADLE_PATH)
+        gradle = pygradle.GradleFactory.create(gradle_cmd=GRADLE_PATH)
         self.assertIn('BUILD SUCCESSFUL', gradle.clean())

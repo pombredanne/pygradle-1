@@ -18,22 +18,30 @@ It's helpful to use pygradle and `pytractor <https://github.com/kpodl/pytractor/
 Basic
 _____
 You can create Gradle wrapper from factory
-
 ::
+
   from pygradle import gradlew
+
   gradle = GradleFactory.create(gradle_cmd='/path/to/gradle')
+  
   gradle.build()
+
 
 GradleFactory reads all tasks from gradle. Creation of gradle wrapper with factory
 is slow because factory is asking real gradle for tasks. Instead of that you can use:
 
 ::
+
   from pygradle import gradlew
+
   gradle = gradlew.Gradle(gradle_cmd='/path/to/gradle')
+  
   gradle.clean()
+  
   gradle.add_task(['package:build', 'package2:build']).parallel().execute()
 
-Which is quicker
+
+Which is quicker.
 
 Missing Features
 ----------------
